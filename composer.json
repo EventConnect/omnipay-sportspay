@@ -1,0 +1,64 @@
+{
+    "name": "eventconnect/omnipay-sportspay",
+    "description": "SportsPay driver for the Omnipay payment processing library",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Chris Wright",
+            "email": "chris.wright@eventconnect.io"
+        },
+        {
+            "name": "Omnipay Contributors",
+            "homepage": "https://github.com/EventConnect/omnipay-sportspay/contributors"
+        }
+    ],
+    "require": {
+        "ext-json": "*",
+        "php": ">=7.4",
+        "omnipay/common": "^3"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.47",
+        "omnipay/tests": "dev-master",
+        "pestphp/pest": "^3.8"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/thephpleague/omnipay-tests"
+        }
+    ],
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Omnipay\\SportsPay\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Omnipay\\SportsPay\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "php-http/discovery": false,
+            "pestphp/pest-plugin": true
+        }
+    },
+    "archive": {
+        "exclude": [
+            "tests/",
+            "phpunit.xml.dist",
+            ".gitignore",
+            "*.md",
+            ".github/"
+        ]
+    },
+    "scripts": {
+        "check-style": "phpcs -p --standard=PSR2 src/",
+        "fix-style": "phpcbf -p --standard=PSR2 src/",
+        "test": "XDEBUG_MODE=coverage ./vendor/bin/pest --coverage"
+    }
+}

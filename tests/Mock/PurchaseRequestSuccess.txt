@@ -1,0 +1,18 @@
+HTTP/1.1 200 OK
+Content-Length: 243
+Content-Type: application/json
+Server: Caddy
+X-Robots-Tag: none
+Date: Wed, 09 Jul 2025 18:32:25 GMT
+
+{
+    "TEXT": "T43225 $1.00",
+    "CODE": "0000",
+    "AUTH": "T43225",
+    "TOKEN": "4000EBYMQTP00002",
+    "HASH": "830E814902F8E2D11152851DEDCC9707",
+    "GATEREF": "z0o9o0vk4oqamp",
+    "DATE": "2025-07-09",
+    "TIME": "14:32:25",
+    "DUR": "0.138"
+}
