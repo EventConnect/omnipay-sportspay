@@ -1,0 +1,14 @@
+HTTP/1.1 200 OK
+Content-Length: 112
+Content-Type: application/json
+Server: Caddy
+X-Robots-Tag: none
+Date: Thu, 10 Jul 2025 14:42:28 GMT
+
+{
+    "TEXT": "INVALID TOKEN",
+    "CODE": "1032",
+    "DATE": "2025-07-10",
+    "TIME": "10:42:28",
+    "DUR": "0.120"
+}

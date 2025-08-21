@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+Content-Length: 261
+Content-Type: application/json
+Server: Caddy
+X-Robots-Tag: none
+Date: Wed, 09 Jul 2025 15:36:39 GMT
+
+{
+    "TEXT": "KEY GENERATED",
+    "CODE": "0000",
+    "APIKEY": "@907E1057701B9209DDE4874B29B1CFA6761DFA215286A75087411CAD1ABC3D23",
+    "HOST": "https://testgate.interpaypos.com/",
+    "USERFEE": "0.00",
+    "DATE": "2025-07-09",
+    "TIME": "11:36:39",
+    "DUR": "0.120"
+}
