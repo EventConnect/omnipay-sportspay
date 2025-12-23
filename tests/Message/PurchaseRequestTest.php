@@ -23,7 +23,7 @@ class PurchaseRequestTest extends TestCase
     {
         $this->request->setAmount('100.00');
         $this->request->setToken('TEST');
-        $this->request->setTransactionReference('1234567890');
+        $this->request->setTransactionId('1234567890');
         $this->setMockHttpResponse('PurchaseRequestSuccess.txt');
 
         /** @var Response $response */
@@ -37,7 +37,7 @@ class PurchaseRequestTest extends TestCase
     {
         $this->request->setAmount('100.00');
         $this->request->setToken('TEST');
-        $this->request->setTransactionReference('1234567890');
+        $this->request->setTransactionId('1234567890');
         $this->setMockHttpResponse('PurchaseRequestFailure.txt');
 
         /** @var Response $response */
