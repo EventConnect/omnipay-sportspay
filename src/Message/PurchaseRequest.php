@@ -14,11 +14,11 @@ class PurchaseRequest extends AbstractRequest
      */
     public function getData(): array
     {
-        $this->validate('amount', 'transactionReference');
+        $this->validate('amount', 'transactionId');
 
         $data = [
             'AMT' => $this->getAmount(),
-            'REF' => $this->getTransactionReference(),
+            'REF' => (string) $this->getTransactionId(),
         ];
 
         if ($token = $this->getToken()) {
