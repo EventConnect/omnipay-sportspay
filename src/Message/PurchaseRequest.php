@@ -18,7 +18,7 @@ class PurchaseRequest extends AbstractRequest
 
         $data = [
             'AMT' => $this->getAmount(),
-            'REF' => (string) $this->getTransactionId(),
+            'REF' => $this->getTransactionId(),
         ];
 
         if ($token = $this->getToken()) {
