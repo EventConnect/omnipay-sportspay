@@ -14,8 +14,8 @@
         }
     ],
     "require": {
-        "ext-json": "*",
         "php": ">=7.4",
+        "ext-json": "*",
         "omnipay/common": "^3"
     },
     "require-dev": {
@@ -39,13 +39,6 @@
             "Omnipay\\SportsPay\\": "tests/"
         }
     },
-    "config": {
-        "allow-plugins": {
-            "ergebnis/composer-normalize": true,
-            "php-http/discovery": false,
-
-        }
-    },
     "archive": {
         "exclude": [
             "tests/",
@@ -54,6 +47,12 @@
             "*.md",
             ".github/"
         ]
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "php-http/discovery": false
+        }
     },
     "scripts": {
         "check-style": "phpcs -p --standard=PSR2 src/",
