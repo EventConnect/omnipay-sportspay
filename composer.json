@@ -20,8 +20,7 @@
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.47",
-        "omnipay/tests": "dev-master",
-        "pestphp/pest": "^3.8"
+        "omnipay/tests": "dev-master"
     },
     "repositories": [
         {
@@ -44,7 +43,7 @@
         "allow-plugins": {
             "ergebnis/composer-normalize": true,
             "php-http/discovery": false,
-            "pestphp/pest-plugin": true
+
         }
     },
     "archive": {
@@ -59,6 +58,6 @@
     "scripts": {
         "check-style": "phpcs -p --standard=PSR2 src/",
         "fix-style": "phpcbf -p --standard=PSR2 src/",
-        "test": "XDEBUG_MODE=coverage ./vendor/bin/pest --coverage"
+        "test": "./vendor/bin/phpunit"
     }
 }
