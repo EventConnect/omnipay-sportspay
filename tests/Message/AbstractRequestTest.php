@@ -43,10 +43,3 @@ class AbstractRequestTest extends TestCase
         $this->assertSame('10.00', $data['PLATFEE']);
     }
 }
-
-//test('get data', function () {
-//    $this->request->getData();
-//
-//    expect($this->request->getTerminalId())->toBe('TERM1')
-//        ->and($this->request->getPassword())->toBe('PASSWORD');
-//});

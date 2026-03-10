@@ -18,11 +18,10 @@ class GetApiKeyRequest extends AbstractRequest
     {
         $this->validate('amount');
 
-        return [
-            ...parent::getData(),
+        return array_merge(parent::getData(), [
             'SUBTYPE' => static::SUBTYPE,
             'AMT' => $this->getAmount(),
-        ];
+        ]);
     }
 
     protected function createResponse($data): Response
