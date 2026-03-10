@@ -14,14 +14,13 @@
         }
     ],
     "require": {
-        "ext-json": "*",
         "php": ">=7.4",
+        "ext-json": "*",
         "omnipay/common": "^3"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.47",
-        "omnipay/tests": "dev-master",
-        "pestphp/pest": "^3.8"
+        "omnipay/tests": "dev-master"
     },
     "repositories": [
         {
@@ -40,13 +39,6 @@
             "Omnipay\\SportsPay\\": "tests/"
         }
     },
-    "config": {
-        "allow-plugins": {
-            "ergebnis/composer-normalize": true,
-            "php-http/discovery": false,
-            "pestphp/pest-plugin": true
-        }
-    },
     "archive": {
         "exclude": [
             "tests/",
@@ -56,9 +48,15 @@
             ".github/"
         ]
     },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "php-http/discovery": false
+        }
+    },
     "scripts": {
         "check-style": "phpcs -p --standard=PSR2 src/",
         "fix-style": "phpcbf -p --standard=PSR2 src/",
-        "test": "XDEBUG_MODE=coverage ./vendor/bin/pest --coverage"
+        "test": "./vendor/bin/phpunit"
     }
 }
