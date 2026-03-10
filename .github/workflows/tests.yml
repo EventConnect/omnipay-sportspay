@@ -30,6 +30,13 @@ jobs:
           extensions: json
           coverage: ${{ matrix.coverage && 'xdebug' || 'none' }}
 
+      - name: Cache Composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: vendor
+          key: php-${{ matrix.php }}-composer-${{ hashFiles('composer.json') }}
+          restore-keys: php-${{ matrix.php }}-composer-
+
       - name: Install dependencies
         run: composer install --prefer-dist --no-interaction --no-progress
 
