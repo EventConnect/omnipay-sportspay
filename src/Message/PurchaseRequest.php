@@ -27,6 +27,8 @@ class PurchaseRequest extends AbstractRequest
             $data['CARD'] = $card->getNumber();
             $data['EXP'] = $card->getExpiryDate('my');
             $data['CVV2'] = $card->getCvv();
+            $data['CUSTNAME'] = $card->getName();
+            $data['CUSTEMAIL'] = $card->getEmail();
         }
 
         return array_merge(parent::getData(), $data);
