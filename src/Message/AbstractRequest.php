@@ -31,16 +31,6 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         return $this->setParameter('password', $value);
     }
 
-    public function setPlatformFee($value): self
-    {
-        return $this->setParameter('platformFee', $value);
-    }
-
-    public function getPlatformFee(): ?string
-    {
-        return $this->getParameter('platformFee');
-    }
-
     public function getTerminalId(): ?string
     {
         return $this->getParameter('terminalId');
@@ -79,10 +69,6 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 
         if (defined('static::TYPE')) {
             $data['TYPE'] = static::TYPE;
-        }
-
-        if ($platformFee = $this->getPlatformFee()) {
-            $data['PLATFEE'] = $platformFee;
         }
 
         return $data;

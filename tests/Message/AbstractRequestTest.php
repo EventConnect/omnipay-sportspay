@@ -35,11 +35,4 @@ class AbstractRequestTest extends TestCase
         $this->assertSame('https://svra.interpaypos.com:1443/api', $this->request->getEndpoint());
     }
 
-    public function testPlatformFee(): void
-    {
-        $this->request->setPlatformFee('10.00');
-        $data = $this->request->getData();
-
-        $this->assertSame('10.00', $data['PLATFEE']);
-    }
 }
