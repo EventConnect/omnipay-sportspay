@@ -46,4 +46,15 @@ class PurchaseRequestTest extends TestCase
         $this->assertFalse($response->isSuccessful());
         $this->assertSame('INVALID TOKEN', $response->getMessage());
     }
+
+    public function testPlatformFee(): void
+    {
+        $this->request->setAmount('100.00');
+        $this->request->setTransactionId('1234567890');
+        $this->request->setPlatformFee('10.00');
+
+        $data = $this->request->getData();
+
+        $this->assertSame('10.00', $data['PLATFEE']);
+    }
 }
